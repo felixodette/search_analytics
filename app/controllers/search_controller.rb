@@ -9,7 +9,8 @@ class SearchController < ApplicationController
     end
 
     def index
-        @searches = Search.all
+        @searches = Rails.cache.fetch('searches', expires_in: 10.minutes) do
+            Search.group(:query, :ip_address).having('count(query) = 1').pluck(:query)
         render json: @searches
     end
 
