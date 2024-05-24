@@ -72,3 +72,5 @@ group :development, :test do
 end
 
 gem 'rspec'
+
+gem 'pg'
