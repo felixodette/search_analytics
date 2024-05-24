@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   searchInProgress = false;
               });
           }
-      }, 500); // Adjust debounce delay as needed
+      }, 500); 
   });
 
   function getAnalytics() {
