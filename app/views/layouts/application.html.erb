@@ -12,5 +12,9 @@
 
   <body>
     <%= yield %>
+    <input type="text" id="search-box" placeholder="Search">
+    <div id="analytics"></div>
+    <%= javascript_include_tag 'search' %>
+    <%# <script src="/assets/javascripts/search.js"></script> %>
   </body>
 </html>
