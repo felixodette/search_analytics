@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clearTimeout(timer);
       timer = setTimeout(() => {
           const query = searchBox.value.trim(); // Trim whitespace from the input
-          if  (query > 4) { // Validate input
+          if  (query.length > 4) { // Validate input
               fetchSearchResults(query);
           }
       }, 500);
